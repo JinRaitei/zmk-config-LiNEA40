@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,
+            //スクロール方向を逆転,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -142,7 +142,7 @@
 &trans            &trans    &trans    &trans     &kp LEFT_SHIFT  &trans    &mkp MB4  &mkp MB5            &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
+            sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
         };
 
         //2
@@ -160,10 +160,10 @@
 
         NUMBER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp KP_EQUAL  &kp KP_N7  &kp KP_N8   &kp KP_N9            &kp KP_PLUS
-&trans  &trans  &trans  &trans  &trans                    &kp LS(N8)    &kp KP_N4  &kp KP_N5   &kp KP_N6            &kp KP_MINUS
-&trans  &trans  &trans  &trans  &trans                    &kp LS(N9)    &kp KP_N1  &kp KP_N2   &kp KP_N3            &kp KP_ASTERISK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_N0                &kp KP_DOT  &kp INTERNATIONAL_3  &kp KP_SLASH
+&trans  &trans  &trans  &trans  &trans                    &kp KP_EQUAL_AS400  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9      &kp KP_PLUS
+&trans  &trans  &trans  &trans  &trans                    &kp LS(N8)          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6      &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans                    &kp LS(N9)          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3      &kp KP_ASTERISK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_0                      &kp KP_DOT       &kp INTERNATIONAL_3  &kp KP_SLASH
             >;
         };
 
