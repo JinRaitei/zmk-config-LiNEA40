@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -122,11 +122,15 @@
         MAIL: MAIL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_wait_time 10>,
-                <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT &kp C &kp F &kp LBKT &kp H &kp I &kp T &kp A &kp C &kp H &kp I &kp MINUS &kp S &kp Y &kp S &kp T &kp E &kp M &kp S &kp DOT &kp C &kp O &kp M>;
-
+            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT &kp C &kp F>;
             label = "MAIL";
+        };
+
+        DOMAIN: DOMAIN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp H &kp I &kp T &kp A &kp C &kp H &kp I &kp MINUS &kp S &kp Y &kp S &kp T &kp E &kp M &kp S &kp DOT &kp C &kp O &kp M>;
+            label = "DOMAIN";
         };
 
         ID: ID {
@@ -134,13 +138,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4 &kp F &kp F &kp MINUS &kp MINUS>;
             label = "ID";
-        };
-
-        PASS: PASS {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp A &kp S &kp S &kp W &kp O &kp R &kp L &kp D>;
-            label = "PASS";
         };
     };
 
@@ -183,7 +180,7 @@
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)   &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                                   &kp INTERNATIONAL_3  &kp KP_NUMBER_7  &kp KP_NUMBER_8   &kp KP_NUMBER_9   &kp KP_PLUS
 &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET                                   &kp LS(MINUS)        &kp KP_NUMBER_4  &kp KP_NUMBER_5   &kp KP_NUMBER_6   &kp KP_MINUS
 &kp SEMICOLON     &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp LS(INTERNATIONAL_1)                            &kp KP_DOT           &kp KP_NUMBER_1  &kp KP_NUMBER_2   &kp KP_NUMBER_3   &kp KP_ASTERISK
-&PASS             &ID               &MAIL              &trans            &trans                   &trans    &kp KP_NUMLOCK  &kp KP_NUMBER_0                       &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp KP_SLASH
+&ID               &DOMAIN           &MAIL              &trans            &trans                   &trans    &kp KP_NUMLOCK  &kp KP_NUMBER_0                       &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp KP_SLASH
             >;
         };
 
