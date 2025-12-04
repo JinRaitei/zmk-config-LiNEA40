@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -136,7 +136,7 @@
         ID: ID {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4 &kp F &kp F &kp MINUS &kp MINUS>;
+            bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4 &kp F &kp F &kp LEFT_BRACKET &kp LEFT_BRACKET>;
             label = "ID";
         };
     };
@@ -187,7 +187,7 @@
         FUNCTION {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &kp C_VOLUME_UP    &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans                    &kp K_MUTE         &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &trans  &trans  &trans  &trans                    &kp C_MUTE         &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &trans  &trans  &trans  &trans                    &kp C_VOLUME_DOWN  &kp F1  &kp F2  &kp F3  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                     &trans  &trans  &trans
             >;
