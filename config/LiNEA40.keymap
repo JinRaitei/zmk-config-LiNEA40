@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -66,104 +66,9 @@
     combos {
         compatible = "zmk,combos";
 
-        Esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-        };
-
-        Tab {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
-        };
-
-        Caps {
-            bindings = <&kp CAPS>;
-            key-positions = <20 21>;
-        };
-
-        NextClick {
-            bindings = <&mkp MB5>;
-            key-positions = <16 15>;
-        };
-
-        LeftClick {
-            bindings = <&mkp MB1>;
-            key-positions = <16 17>;
-        };
-
-        CenterClick {
-            bindings = <&mkp MB3>;
-            key-positions = <18 17 16>;
-        };
-
-        RightClick {
-            bindings = <&mkp MB2>;
-            key-positions = <18 17>;
-        };
-
-        PrevClick {
-            bindings = <&mkp MB4>;
-            key-positions = <19 18>;
-        };
-
         Wireless {
             bindings = <&mo 6>;
             key-positions = <37 34>;
-        };
-
-        En {
-            bindings = <&kp INTERNATIONAL_3>;
-            key-positions = <6 5>;
-        };
-
-        Fn9 {
-            bindings = <&kp F9>;
-            key-positions = <6 7>;
-        };
-
-        Fn10 {
-            bindings = <&kp F10>;
-            key-positions = <7 8>;
-        };
-
-        Print {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <8 9>;
-        };
-
-        Home {
-            bindings = <&kp HOME>;
-            key-positions = <25 26>;
-        };
-
-        PageUp {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <26 27>;
-        };
-
-        PageDown {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <27 28>;
-        };
-
-        End {
-            bindings = <&kp END>;
-            key-positions = <28 29>;
-        };
-
-        Close {
-            bindings = <&kp LA(F4)>;
-            key-positions = <1 2 3>;
-        };
-
-        Desktop {
-            bindings = <&kp LG(D)>;
-            key-positions = <11 12 13>;
-        };
-
-        Copilot {
-            bindings = <&kp LG(C)>;
-            key-positions = <21 22 23>;
         };
     };
 
@@ -187,7 +92,7 @@
         MAIL: MAIL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT>;
+            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT &kp C &kp F>;
             label = "MAIL";
         };
 
@@ -201,7 +106,7 @@
         ID: ID {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp Y &kp A &kp M &kp A &kp LS(INTERNATIONAL_1)>;
+            bindings = <&kp H &kp Y &kp A &kp M &kp A &kp LS(INTERNATIONAL_1) &kp N2 &kp N5 &kp C>;
             label = "ID";
         };
     };
@@ -212,7 +117,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R   &kp T                                                              &kp Y        &kp U  &kp I          &kp O          &kp P
-&kp A             &kp S         &lt 2 D       &kp F   &kp G                                                              &kp H        &kp J  &lt 5 K        &kp L          &kp MINUS
+&kp A             &kp S         &kp D         &kp F   &kp G                                                              &kp H        &kp J  &kp K          &kp L          &kp MINUS
 &kp Z             &kp X         &kp C         &kp V   &kp B                                                              &kp N        &kp M  &kp COMMA      &kp DOT        &kp SLASH
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &trans  &lt 3 SPACE  &mt LEFT_SHIFT DELETE    &mt RIGHT_CONTROL BACKSPACE  &lt 4 ENTER         &kp RIGHT_ALT  &kp RIGHT_GUI  &kp RIGHT_CONTROL
             >;
@@ -240,10 +145,10 @@
 
         HI {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)   &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                             &trans    &trans    &trans       &trans    &trans
-&kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET                             &mkp MB5  &mkp MB1  &mkp MB3     &mkp MB2  &mkp MB4
-&kp SEMICOLON     &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp LS(INTERNATIONAL_1)                      &trans    &trans    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN
-&kp LEFT_CONTROL  &kp LEFT_GUI      &kp LEFT_SHIFT     &trans            &trans                   &trans    &kp HOME  &kp END             &kp LEFT     &kp DOWN  &kp RIGHT
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)   &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                           &kp HOME       &trans    &trans    &trans    &kp PRINTSCREEN
+&kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET                           &kp PAGE_UP    &mkp MB1  &mkp MB3  &mkp MB2  &mo 2
+&kp SEMICOLON     &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp LS(INTERNATIONAL_1)                    &kp PAGE_DOWN  &mkp MB4  &mkp MB5  &kp UP    &mo 5
+&kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LEFT_ALT       &trans            &trans                   &trans    &kp F4  &kp END                  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
 
@@ -254,6 +159,8 @@
 &kp CAPS       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK                            &kp C_VOLUME_DOWN  &kp F1  &kp F2  &kp F3  &kp F12
 &kp LS(MINUS)  &kp KP_NUMBER_0  &kp KP_DOT       &trans           &kp KP_SLASH     &kp KP_NUMLOCK    &trans  &trans                     &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&mouse_scrl SCRL_LEFT SCRL_RIGHT>;
         };
 
         SCROLL {
