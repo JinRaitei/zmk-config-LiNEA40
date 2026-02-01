@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -107,7 +107,7 @@
         MAIL: MAIL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT &kp C &kp F>;
+            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT>;
             label = "MAIL";
         };
 
@@ -121,7 +121,7 @@
         ID: ID {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4 &kp F &kp F &kp LBKT &kp LBKT>;
+            bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4>;
             label = "ID";
         };
     };
