@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -107,7 +107,7 @@
         MAIL: MAIL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT>;
+            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT &kp C &kp F>;
             label = "MAIL";
         };
 
@@ -121,7 +121,7 @@
         ID: ID {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4>;
+            bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4 &kp F &kp F &kp LBKT &kp LBKT>;
             label = "ID";
         };
     };
@@ -134,7 +134,7 @@
 &kp Q                 &kp W             &kp E              &kp R   &kp T                                     &kp Y        &kp U  &kp I               &kp O               &kp P
 &kp A                 &lt 5 S           &kp D              &kp F   &kp G                                     &kp H        &kp J  &kp K               &kp L               &kp MINUS
 &mt LEFT_SHIFT Z      &kp X             &kp C              &kp V   &kp B                                     &kp N        &kp M  &kp COMMA           &kp UP              &mt RIGHT_SHIFT SLASH
-&mt ESC LEFT_CONTROL  &mt TAB LEFT_GUI  &mt CAPS LEFT_ALT  &trans  &lt 3 SPACE  &kp DELETE    &kp BACKSPACE  &lt 4 ENTER         &mt RIGHT_ALT LEFT  &mt RIGHT_GUI DOWN  &mt RIGHT_CONTROL RIGHT
+&mt LEFT_CONTROL ESC  &mt LEFT_GUI TAB  &mt LEFT_ALT CAPS  &trans  &lt 3 SPACE  &kp DELETE    &kp BACKSPACE  &lt 4 ENTER         &mt RIGHT_ALT LEFT  &mt RIGHT_GUI DOWN  &mt RIGHT_CONTROL RIGHT
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
