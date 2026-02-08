@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -107,7 +107,7 @@
         MAIL: MAIL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT>;
+            bindings = <&kp H &kp I &kp R &kp O &kp N &kp O &kp B &kp U &kp DOT &kp Y &kp A &kp M &kp A &kp S &kp A &kp K &kp I &kp DOT &kp C &kp F>;
             label = "MAIL";
         };
 
@@ -121,7 +121,7 @@
         ID: ID {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4>;
+            bindings = <&kp LS(F) &kp N9 &kp N9 &kp N0 &kp N0 &kp N4 &kp F &kp F &kp LBKT &kp LBKT>;
             label = "ID";
         };
     };
@@ -132,7 +132,7 @@
         default_layer {
             bindings = <
 &kp Q                 &kp W             &kp E              &kp R   &kp T                                     &kp Y        &kp U  &kp I               &kp O               &kp P
-&kp A                 &lt 5 S           &kp D              &kp F   &kp G                                     &kp H        &kp J  &kp K               &kp L               &kp MINUS
+&kp A                 &kp S             &kp D              &kp F   &kp G                                     &kp H        &kp J  &kp K               &kp L               &lt 5 MINUS
 &mt LEFT_SHIFT Z      &kp X             &kp C              &kp V   &kp B                                     &kp N        &kp M  &kp COMMA           &kp UP              &mt RIGHT_SHIFT SLASH
 &mt LEFT_CONTROL ESC  &mt LEFT_GUI TAB  &mt LEFT_ALT CAPS  &trans  &lt 3 SPACE  &kp DELETE    &kp BACKSPACE  &lt 4 ENTER         &mt RIGHT_ALT LEFT  &mt RIGHT_GUI DOWN  &mt RIGHT_CONTROL RIGHT
             >;
@@ -143,16 +143,16 @@
         AML {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mo 5
 &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB4  &mkp MB5  &trans    &trans
-&trans  &trans  &trans  &trans  &mo 2   &trans    &trans  &trans            &to 0     &trans    &trans
+&trans  &trans  &trans  &trans  &mo 2   &trans    &trans  &trans            &trans    &trans    &trans
             >;
         };
 
         SML {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mo 5
 &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB4  &mkp MB5  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans    &trans    &trans
             >;
@@ -160,19 +160,19 @@
 
         NUMBER {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)   &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                                   &kp INTERNATIONAL_3  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
-&kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET                                   &kp LS(NUMBER_8)     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp SEMICOLON     &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp LS(INTERNATIONAL_1)                            &kp LS(NUMBER_9)     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK
-&trans            &trans            &trans             &trans            &trans                   &trans    &kp KP_NUMLOCK  &kp KP_NUMBER_0                       &kp KP_DOT       &kp LS(MINUS)    &kp KP_SLASH
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)   &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans
+&kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET                                       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &trans
+&kp SEMICOLON     &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp LS(INTERNATIONAL_1)                                &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK  &trans
+&trans            &trans            &trans             &trans            &trans                   &kp KP_NUMLOCK    &kp KP_DOT  &kp KP_NUMBER_0                   &kp LS(MINUS)    &kp KP_SLASH     &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&kp F1            &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8    &kp F9         &kp F10
-&trans            &trans  &trans  &trans  &trans                    &trans  &trans  &trans    &trans         &kp F11
-&trans            &trans  &trans  &trans  &trans                    &trans  &trans  &trans    &kp PAGE_UP    &kp F12
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &kp HOME  &kp PAGE_DOWN  &kp END
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)   &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                           &kp F7  &kp F8  &kp F9    &kp F10        &kp F11
+&kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET                           &kp F4  &kp F5  &kp F6    &trans         &trans
+&kp SEMICOLON     &kp SINGLE_QUOTE  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp LS(INTERNATIONAL_1)                    &kp F1  &kp F2  &kp F3    &kp PAGE_UP    &trans
+&kp LEFT_CONTROL  &kp LEFT_GUI      &kp LEFT_ALT       &trans            &trans                   &trans    &trans  &trans          &kp HOME  &kp PAGE_DOWN  &kp END
             >;
         };
 
